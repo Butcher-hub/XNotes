@@ -3,16 +3,15 @@
 layout: home
 
 hero:
-  name: "XNotes"
-  text: "XNotes"
-  tagline: My great project tagline
+  name: "Tan Xi's Notes"
+  tagline: Don't go to sleep when you can't tell yourself what you learned today.
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: Get Satrted
+      link: /get-started
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: View on GitHub
+      link: https://github.com/Butcher-hub/XNotes
 
 features:
   - title: Feature A

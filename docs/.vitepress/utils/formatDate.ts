@@ -5,12 +5,10 @@ import { Post } from "./types.js";
  * @param raw - 日期字符串
  */
 export function formatDate(raw: string | undefined): Post["date"] {
-  if (!raw)
-    return {
-      time: 0,
-      string: "",
-    };
-  const date = new Date(raw);
+  let date = new Date();
+  if (raw) {
+    date = new Date(raw);
+  }
   // date.setHours(12);
   return {
     time: +date,
