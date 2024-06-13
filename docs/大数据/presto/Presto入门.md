@@ -4,7 +4,7 @@
 
 Presto由Facebook设计，是一个开源的分布式SQL查询引擎，它是为了高效查询不同系统和各个规模的数据源而设计的一套系统，它使得用SQL访问任何数据源成为可能，可以通过水平扩展的方式来查询大型数据集。
 
-![image](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/QvjnAAQ55G64nXo5/img/af7413ee-a253-4af2-9a53-14525db73446.png)
+![image](./assets/af7413ee-a253-4af2-9a53-14525db73446.png)
 
 尽管Presto能理解并高效的查询SQL，但它并不是一个数据库，因为它不包含自己的数据存储系统，此外Presto也不适合联机事务处理（OLTP）。
 
@@ -29,13 +29,13 @@ SmartbiPresto目前用的是PrestoDB-0.275，因此主要也是学习PrestoDB
 
 可以直接在官网下载最新版本：[https://prestodb.io/getting-started/](https://prestodb.io/getting-started/)
 
-![image](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/QvjnAAQ55G64nXo5/img/d8fc0aa3-e2bd-4ce9-8a0f-a2b8c4c40a1e.png)
+![image](./assets/d8fc0aa3-e2bd-4ce9-8a0f-a2b8c4c40a1e.png)
 
 （下载速度非常感人，好人不推荐）
 
 Presto的二进制包使用Maven中心仓库分发，不过在国内Maven中心仓库通常也很慢，因此，好人推荐直接在阿里的maven仓库中搜索并下载：[https://developer.aliyun.com/mvn/search](https://developer.aliyun.com/mvn/search)
 
-![image](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/QvjnAAQ55G64nXo5/img/14928992-83ed-45e1-af3f-0e75ef0facc8.png)
+![image](./assets/14928992-83ed-45e1-af3f-0e75ef0facc8.png)
 
 其他的镜像仓库应该也是可以找到的。
 
@@ -53,7 +53,7 @@ cd presto-server-0.278
 ```
 
 
-![image](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/QvjnAAQ55G64nXo5/img/a3603a7c-e316-489a-96b3-081f4df62845.png)
+![image](./assets/a3603a7c-e316-489a-96b3-081f4df62845.png)
 
 子目录组成：
 
@@ -139,6 +139,6 @@ connector.name=tpch
 
 前台运行可以观察日志输出，可以验证Presto是否启动成功。
 
-![image](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/QvjnAAQ55G64nXo5/img/355c770a-0638-4813-a6f9-a258d1bffbd9.png)
+![image](./assets/355c770a-0638-4813-a6f9-a258d1bffbd9.png)
 
      bin/launcher start
