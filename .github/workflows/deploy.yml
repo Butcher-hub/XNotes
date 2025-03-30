@@ -1,9 +1,7 @@
-# Simple workflow for deploying static content to GitHub Pages
-
 name: Deploy 
 on:
   push:
-    branches: "main"
+    branches: ["main"]  # 使用数组格式更规范
 permissions:
   contents: read
   pages: write
@@ -19,21 +17,29 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4  # 升级到最新版 v4
         with:
           fetch-depth: 0
-      - name: Setup pages
-        uses: actions/setup-node@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4  # 升级到 v4
         with:
-          node-version: 16
+          node-version: 20  # 推荐使用 LTS 版本（如 20）
           cache: npm
+
       - run: npm install --frozen-lockfile
+
       - name: Build
         run: npm run docs:build
-      - uses: actions/configure-pages@v3
-      - uses: actions/upload-pages-artifact@v1
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5  # 升级到 v5
+
+      - name: Upload Pages Artifact
+        uses: actions/upload-pages-artifact@v3  # 升级到 v3
         with:
           path: docs/.vitepress/dist
+
       - name: Deploy
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4  # 升级到 v4
